@@ -21,7 +21,7 @@ script:
     - "-t"
     - "<%= bc_time.blank? ? 15 : bc_time %>"
   <%- if not bc_gres.blank? -%>
-    - "--gres=<%= bc_gres -%>"
+    - "--gres=<%= bc_gres.strip -%>"
   <%- end -%>
     - "--error=slurm.%j.err"
     - "--output=slurm.%j.out"
