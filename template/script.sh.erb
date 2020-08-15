@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-<%- gpu = context.node_type.include?("vis") -%>
-
 # Clean the environment
 module purge
 
 # Set working directory to home directory
-cd "${HOME}"
+cd "$HOME"
 
 #
 # Launch Xfce Window Manager and Panel
@@ -15,12 +13,12 @@ cd "${HOME}"
 (
   export SEND_256_COLORS_TO_REMOTE=1
   export XDG_CONFIG_HOME="<%= session.staged_root.join("config") %>"
-  export XDG_DATA_HOME="<%= session.staged_root.join("share") %>"
+  export XDG_DATA_HOME="<%= session.staged_root.join("share") -%>"
   export XDG_CACHE_HOME="$(mktemp -d)"
   module restore
   set -x
   xfwm4 --compositor=off --daemon --sm-client-disable
-  xsetroot -solid "#D3D3D3"
+  xsetroot -solid "<%= context.background_color -%>"
   xfsettingsd --sm-client-disable
   xfce4-panel --sm-client-disable
 ) &
@@ -30,16 +28,8 @@ cd "${HOME}"
 #
 
 # Load the required environment
-module load xalt/latest <%= context.version %>
-
+module load <%= context.version %>
+module list
+set -x
 # Launch MATLAB
-<%- if gpu -%>
-module load intel/16.0.3 virtualgl
-module list
-set -x
-vglrun matlab -desktop -nosoftwareopengl
-<%- else -%>
-module list
-set -x
 matlab -desktop
-<%- end -%>
