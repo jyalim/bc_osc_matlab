@@ -55,7 +55,7 @@ attributes:
     value: ""
     help: |
       - Request GRES here if needed (Generic RESources, usually GPUs, e.g.
-        `gpu:GTC1080:1` or just `gpu:1`)
+        `gpu:GTX1080:1` or just `gpu:1`)
       - Default is blank
       - Note that not all gpu nodes currently support this interactive
         application! 
