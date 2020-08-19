@@ -14,18 +14,19 @@ form:
 attributes:
   bc_partition:
     label: "Partition"
-    value: "debug"
+    value: "serial"
     help: |
-      - Specify a partition to run on. Default is `debug`.
-      - **docs**: http://bit.ly/RCnodes
-      - App is currently supported on 
-        `debug`, `fn1`, and `fn2`.
+      - Specify a partition to run on, e.g. `serial` or `debug`. 
+      = Default is `serial`.
+      = **note**: The `debug` partition has a max walltime of 15 minutes.
+      = **note**: The `htc` partition has a max walltime of 4 hours.
+      - **Additional partition info**: http://bit.ly/RCnodes
 
   bc_qos:
     label: "QOS"
-    value: "wildfire"
+    value: "normal"
     help: |
-      Specify a QOS, e.g. `normal`. Default is `wildfire`.
+      Specify a QOS, e.g. `normal` or `wildfire`. Default is `normal`
 
   bc_node:
     label: "Number of Nodes"

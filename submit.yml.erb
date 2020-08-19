@@ -13,9 +13,9 @@ script:
   native:
     - "--job-name=ood-virtual-desktop-matlab"
     - "-p"
-    - "<%= bc_partition.blank? ? 'debug' : bc_partition %>"
+    - "<%= bc_partition.blank? ? 'serial' : bc_partition %>"
     - "-q"
-    - "<%= bc_qos.blank? ? 'wildfire' : bc_qos %>"
+    - "<%= bc_qos.blank? ? 'normal' : bc_qos %>"
     - "-c"
     - "<%= bc_core.blank? ? 1 : bc_core.to_i %>"
     - "-t"
