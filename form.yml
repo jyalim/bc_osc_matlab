@@ -17,9 +17,9 @@ attributes:
     value: "serial"
     help: |
       - Specify a partition to run on, e.g. `serial` or `debug`. 
-      = Default is `serial`.
-      = **note**: The `debug` partition has a max walltime of 15 minutes.
-      = **note**: The `htc` partition has a max walltime of 4 hours.
+      - Default is `serial`.
+      - **note**: The `debug` partition has a max walltime of 15 minutes.
+      - **note**: The `htc` partition has a max walltime of 4 hours.
       - **Additional partition info**: http://bit.ly/RCnodes
 
   bc_qos:
@@ -39,7 +39,10 @@ attributes:
     min: 1
     max: 256
     help: |
-      Number of cores on node. Default 1 core.
+      Number of cores on node. Default 1 core. **Note** that this is not a
+      dynamic widget! Your choice of cores must reflect what is available on
+      the nodes within a your selected partition. _Additional partition info_:
+      http://bit.ly/RCnodes
 
   bc_time:
     label: "Job Wall Time"
@@ -67,7 +70,7 @@ attributes:
   version:
     widget: select
     label: "MATLAB version"
-    help: "This defines the version of MATLAB you want to load."
+    help: "This selects the version of MATLAB you want to load."
     options:
       - [ "2020a", "matlab/2020a" ]
       - [ "2019b", "matlab/2019b" ]
