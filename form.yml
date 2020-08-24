@@ -73,6 +73,7 @@ attributes:
     help: "This selects the version of MATLAB you want to load."
     options:
       - [ "2020a", "matlab/2020a" ]
+      - [ "2020a-mps", "matlab/2020a-mps" ]
       - [ "2019b", "matlab/2019b" ]
       - [ "2019a", "matlab/2019a" ]
       - [ "2018a", "matlab/2018a" ]

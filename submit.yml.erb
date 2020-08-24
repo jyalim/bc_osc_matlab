@@ -16,7 +16,7 @@ script:
     - "<%= bc_partition.blank? ? 'serial' : bc_partition %>"
     - "-q"
     - "<%= bc_qos.blank? ? 'normal' : bc_qos %>"
-    - "-c"
+    - "-n"
     - "<%= bc_core.blank? ? 1 : bc_core.to_i %>"
     - "-t"
     - "<%= bc_time.blank? ? 15 : bc_time %>"
