@@ -72,19 +72,19 @@ attributes:
     label: "MATLAB version"
     help: "This selects the version of MATLAB you want to load."
     options:
-      - [ "2020a", "matlab/2020a" ]
+      - [ "2020a",     "matlab/2020a" ]
       - [ "2020a-mps", "matlab/2020a-mps" ]
-      - [ "2019b", "matlab/2019b" ]
-      - [ "2019a", "matlab/2019a" ]
-      - [ "2018a", "matlab/2018a" ]
-      - [ "2017a", "matlab/2017a" ]
-      - [ "2016b", "matlab/2016b" ]
-      - [ "2016a", "matlab/2016a" ]
-      - [ "2015b", "matlab/2015b" ]
-      - [ "2015a", "matlab/2015a" ]
-      - [ "2014b", "matlab/2014b" ]
-      - [ "2013a", "matlab/2013a" ]
-      - [ "2012b", "matlab/2012b" ]
+      - [ "2019b",     "matlab/2019b" ]
+      - [ "2019a",     "matlab/2019a" ]
+      - [ "2018a",     "matlab/2018a" ]
+      - [ "2017a",     "matlab/2017a" ]
+      - [ "2016b",     "matlab/2016b" ]
+      - [ "2016a",     "matlab/2016a" ]
+      - [ "2015b",     "matlab/2015b" ]
+      - [ "2015a",     "matlab/2015a" ]
+      - [ "2014b",     "matlab/2014b" ]
+      - [ "2013a",     "matlab/2013a" ]
+      - [ "2012b",     "matlab/2012b" ]
 
   background_color:
     widget: select
